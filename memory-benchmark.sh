@@ -30,7 +30,7 @@ sysbench memory --memory-block-size=1G --memory-scope=global --memory-total-size
 sysbench memory --memory-block-size=1G --memory-scope=global --memory-total-size=100G --memory-access-mode=seq --memory-oper=write run > results/sysbench-memory-bs-1G-seq-write.txt
 
 #Perform 1K block size sysbench memory random read and write benchmarks with a total of 100GB of data transferred.
-sysbench memory --memory-block-size=1K --memory-scope=global --memory-total-size=100G --memory-access-mode=rnd--memory-oper=read run > results/sysbench-memory-bs-1K-rnd-read.txt
+sysbench memory --memory-block-size=1K --memory-scope=global --memory-total-size=100G --memory-access-mode=rnd --memory-oper=read run > results/sysbench-memory-bs-1K-rnd-read.txt
 sysbench memory --memory-block-size=1K --memory-scope=global --memory-total-size=100G --memory-access-mode=rnd --memory-oper=write run > results/sysbench-memory-bs-1K-rnd-write.txt
 
 #Perform 1M block size sysbench memory random read and write benchmarks with a total of 100GB of data transferred.
