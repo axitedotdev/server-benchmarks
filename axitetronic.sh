@@ -1,16 +1,13 @@
 #!/bin/bash
 
+#Speedtest Servers: https://c.speedtest.net/speedtest-servers-static.php
 SPEEDTEST_SERVER=24374 #GTT NYC
 swapoff -a
 
 apt update && apt dist-upgrade -y
 apt install sysbench nginx mysql-server python redis-server zip unzip -y
 
-apt install gnupg1 apt-transport-https dirmngr
-export INSTALL_KEY=379CE192D401AB61
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $INSTALL_KEY
-echo "deb https://ookla.bintray.com/debian generic main" | sudo tee  /etc/apt/sources.list.d/speedtest.list
-apt update
+curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
 apt install speedtest
 
 mkdir results
