@@ -5,7 +5,7 @@
 apt update && apt -y dist-upgrade
 #Install sysbench, zip & unzip
 curl -s https://packagecloud.io/install/repositories/akopytov/sysbench/script.deb.sh | bash
-apt -y install sysbench zip unzip
+apt -y install sysbench zip
 
 #Create the results directory
 mkdir results
